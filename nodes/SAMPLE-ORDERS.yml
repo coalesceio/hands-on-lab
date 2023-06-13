@@ -1,0 +1,154 @@
+steps:
+  ORDERS-1011bb54-fe75-4fb3-b1c4-c47f210a1264:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Orders data as defined by TPC-H
+      locationID: ""
+      locationName: SAMPLE
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b03ce861-f641-4363-9074-138f0141ecc4
+              stepCounter: 1011bb54-fe75-4fb3-b1c4-c47f210a1264
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: O_ORDERKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 25b503cd-15ca-440f-8447-54a00e518f27
+              stepCounter: 1011bb54-fe75-4fb3-b1c4-c47f210a1264
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: O_CUSTKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 310c22be-72f3-4a7e-a667-157f7218a401
+              stepCounter: 1011bb54-fe75-4fb3-b1c4-c47f210a1264
+            config: {}
+            dataType: VARCHAR(1)
+            defaultValue: ""
+            description: ""
+            name: O_ORDERSTATUS
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 72a613c7-d21f-4f20-b9f7-1da808fb41b9
+              stepCounter: 1011bb54-fe75-4fb3-b1c4-c47f210a1264
+            config: {}
+            dataType: NUMBER(12,2)
+            defaultValue: ""
+            description: ""
+            name: O_TOTALPRICE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b52478e4-5d39-442d-90dd-d98a0fba3162
+              stepCounter: 1011bb54-fe75-4fb3-b1c4-c47f210a1264
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: O_ORDERDATE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2746d77f-98c4-484a-89ea-e368d8e3f7d3
+              stepCounter: 1011bb54-fe75-4fb3-b1c4-c47f210a1264
+            config: {}
+            dataType: VARCHAR(15)
+            defaultValue: ""
+            description: ""
+            name: O_ORDERPRIORITY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0760bb5d-c1ab-4716-8faf-92279ab9fe55
+              stepCounter: 1011bb54-fe75-4fb3-b1c4-c47f210a1264
+            config: {}
+            dataType: VARCHAR(15)
+            defaultValue: ""
+            description: ""
+            name: O_CLERK
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2b5fe1f9-c439-4086-837a-f82f849d0351
+              stepCounter: 1011bb54-fe75-4fb3-b1c4-c47f210a1264
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: O_SHIPPRIORITY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 75d0175b-4c32-40e3-8122-7c2b4606c5f4
+              stepCounter: 1011bb54-fe75-4fb3-b1c4-c47f210a1264
+            config: {}
+            dataType: VARCHAR(79)
+            defaultValue: ""
+            description: ""
+            name: O_COMMENT
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SAMPLE', 'ORDERS') }}
+      name: ORDERS
+      schema: ""
+      sqlType: Source
+      table: ORDERS
+      type: sourceInput
+    stepCounter: 1011bb54-fe75-4fb3-b1c4-c47f210a1264

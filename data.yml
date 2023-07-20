@@ -14,8 +14,8 @@ locations:
         database: SNOWFLAKE_SAMPLE_DATA
         schema: TPCH_SF1
       "3":
-        database: SNOWFLAKE_SAMPLE
-        schema: TPCH_SF2
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF10
       "5":
         database: SAMPLE_DATA
         schema: TPCH_SF4
@@ -25,8 +25,8 @@ locations:
         database: ANALYTICS
         schema: PUBLIC
       "3":
-        database: SNOWFLAKE_SAMPLE_DATA
-        schema: TPCH_SF2
+        database: ANALYTICS
+        schema: INFORMATION_SCHEMA
 macros: {}
 packages: {}
 projects: {}

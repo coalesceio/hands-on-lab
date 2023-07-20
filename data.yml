@@ -19,6 +19,9 @@ locations:
       "5":
         database: SAMPLE_DATA
         schema: TPCH_SF4
+      "7":
+        database: RAW
+        schema: PUBLIC
   WORK:
     mappingDefinitions:
       "2":
@@ -27,6 +30,9 @@ locations:
       "3":
         database: ANALYTICS
         schema: INFORMATION_SCHEMA
+      "7":
+        database: RAW
+        schema: DRYRUN
 macros: {}
 packages: {}
 projects: {}

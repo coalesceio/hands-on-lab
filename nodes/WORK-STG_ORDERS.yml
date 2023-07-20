@@ -23,7 +23,7 @@ steps:
             dataType: NUMBER(38,0)
             description: ""
             hashColumns: []
-            hashDetails: null
+            hashDetails: nul
             name: O_ORDERKEY
             nullable: false
             sourceColumnReferences:

@@ -22,6 +22,9 @@ locations:
       "7":
         database: RAW
         schema: PUBLIC
+      "9":
+        database: RAW
+        schema: COVID
   WORK:
     mappingDefinitions:
       "2":
@@ -33,6 +36,9 @@ locations:
       "7":
         database: RAW
         schema: DRYRUN
+      "9":
+        database: RAW
+        schema: DW
 macros: {}
 packages: {}
 projects: {}

@@ -16,17 +16,14 @@ locations:
       "3":
         database: SNOWFLAKE_SAMPLE
         schema: TPCH_SF2
-      "4":
-        database: SNOWFLAKE_DATA
-        schema: TPCH_SF3
       "5":
         database: SAMPLE_DATA
         schema: TPCH_SF4
   WORK:
     mappingDefinitions:
       "2":
-        database: SNOWFLAKE_SAMPLE_DATA
-        schema: TPCH_SF1
+        database: ANALYTICS
+        schema: PUBLIC
       "3":
         database: SNOWFLAKE_SAMPLE_DATA
         schema: TPCH_SF2

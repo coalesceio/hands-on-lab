@@ -470,7 +470,6 @@ steps:
               DIM_PART: ebf81e63-9b12-4b4b-ab48-1ee73338dd98
               DIM_SUPPLIER: c387ffcf-e1db-4d62-82af-6a27c6a350f1
               STG_LINEITEM_ORDERS: 904dae40-22e2-4724-8580-3bec24c8b916
-              STG_PARTSUPP: 25470d97-7efe-4f19-9490-54d2e752630d
             customSQL:
               customSQL: ""
             dependencies:
@@ -482,10 +481,8 @@ steps:
                 nodeName: DIM_SUPPLIER
               - locationName: STG
                 nodeName: STG_LINEITEM_ORDERS
-              - locationName: STG
-                nodeName: STG_PARTSUPP
             join:
-              joinCondition: |-
+              joinCondition: |+
                 FROM {{ ref('STG', 'STG_LINEITEM_ORDERS') }} "STG_LINEITEM_ORDERS"
 
                 LEFT JOIN {{ ref('DW', 'DIM_CUSTOMER') }} "DIM_CUSTOMER"
@@ -504,11 +501,6 @@ steps:
 
                 ON "STG_LINEITEM_ORDERS"."L_SUPPKEY" = "DIM_SUPPLIER"."S_SUPPKEY"
 
-                LEFT JOIN {{ ref('STG', 'STG_PARTSUPP') }} "STG_PARTSUPP"
-
-                ON "STG_LINEITEM_ORDERS"."L_PARTKEY" = "STG_PARTSUPP"."PS_PARTKEY" AND
-
-                "STG_LINEITEM_ORDERS"."L_SUPPKEY" = "STG_PARTSUPP"."PS_SUPPKEY"
             name: STG_LINEITEM_ORDERS_DIM_LOOKUP
             noLinkRefs: []
       name: STG_LINEITEM_ORDERS_DIM_LOOKUP

@@ -16,12 +16,18 @@ locations:
       "7":
         database: RISHU_HOL_TEST
         schema: DWH
+      "9":
+        database: RISHU_HOL_PROD
+        schema: DWH
   SRC:
     mappingDefinitions:
       "2":
         database: SNOWFLAKE_SAMPLE_DATA
         schema: TPCH_SF1
       "7":
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF1
+      "9":
         database: SNOWFLAKE_SAMPLE_DATA
         schema: TPCH_SF1
   STG:
@@ -32,6 +38,9 @@ locations:
       "7":
         database: RISHU_HOL_TEST
         schema: STG
+      "9":
+        database: RISHU_HOL_PROD
+        schema: STG
   VW:
     mappingDefinitions:
       "2":
@@ -39,6 +48,9 @@ locations:
         schema: VW
       "7":
         database: RISHU_HOL_TEST
+        schema: VW
+      "9":
+        database: RISHU_HOL_PROD
         schema: VW
 macros:
   Macro-SCALEFREE-DATAVAULT4COALESCE::1:

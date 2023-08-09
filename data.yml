@@ -38,7 +38,7 @@ locations:
         schema: DRYRUN
       "9":
         database: RAW
-        schema: DW
+        schema: COVID
 macros: {}
 packages: {}
 projects: {}

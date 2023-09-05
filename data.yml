@@ -16,6 +16,12 @@ locations:
       "3":
         database: ""
         schema: ""
+      "5":
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF1
+      "6":
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF1
   TARGET:
     mappingDefinitions:
       "2":
@@ -24,6 +30,12 @@ locations:
       "3":
         database: ""
         schema: ""
+      "5":
+        database: COAL_TEST
+        schema: WORK
+      "6":
+        database: COAL_PROD
+        schema: WORK
 macros: {}
 packages: {}
 projects: {}

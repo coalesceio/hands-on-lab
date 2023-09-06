@@ -1,0 +1,33 @@
+pool: default
+
+variables:
+ - name: coalesceCliVersion
+   value: latest 
+
+# Before utilizing this pipeline in production scenarios, it is advised to pin a specific version. 
+# This practice aims to reduce potential disruptions. 
+# You can find the released versions on NPM at this link: https://www.npmjs.com/package/@coalescesoftware/coa 
+
+schedules:
+- cron: "0 0 * * *"
+  displayName: Daily Refresh
+  branches:
+    include:
+    - main
+
+steps:
+
+- task: DownloadSecureFile@1
+  name: coaConfig
+  displayName: 'Download coa config'
+  inputs:
+    secureFile: 'config'
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      # Install Coalesce CLI tool, if not installed
+      npm list -g | grep "@coalescesoftware/coa@$(coalesceCliVersion)" || npm install -g @coalescesoftware/coa@$(coalesceCliVersion);
+      
+      # Start refresh
+      coa refresh  --config $(coaConfig.secureFilePath);

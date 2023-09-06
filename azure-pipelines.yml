@@ -1,8 +1,6 @@
 pool:
   vmImage: ubuntu-latest
-
-trigger: main
-
+  
 variables:
  - name: coalesceCliVersion
    value: latest 

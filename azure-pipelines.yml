@@ -1,4 +1,7 @@
-pool: default
+pool:
+  vmImage: ubuntu-latest
+
+branch: main
 
 variables:
  - name: coalesceCliVersion

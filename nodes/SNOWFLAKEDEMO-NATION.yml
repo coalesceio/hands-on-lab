@@ -1,0 +1,79 @@
+steps:
+  NATION-5a7e5102-619f-4398-b096-02b5ced33b1a:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Nation data as defined by TPC-H
+      locationID: ""
+      locationName: SNOWFLAKEDEMO
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cb12a4c8-4570-46b8-b8b0-d3d995e805e3
+              stepCounter: 5a7e5102-619f-4398-b096-02b5ced33b1a
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: N_NATIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 18e10298-9900-4fb7-946a-61712c0b8fe0
+              stepCounter: 5a7e5102-619f-4398-b096-02b5ced33b1a
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: N_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 052bb9b5-44cf-4e1e-b698-9a9b38592463
+              stepCounter: 5a7e5102-619f-4398-b096-02b5ced33b1a
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: N_REGIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c153790f-9b05-41c0-8974-541503e58aa2
+              stepCounter: 5a7e5102-619f-4398-b096-02b5ced33b1a
+            config: {}
+            dataType: VARCHAR(152)
+            defaultValue: ""
+            description: ""
+            name: N_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SNOWFLAKEDEMO', 'NATION') }}
+      name: NATION
+      schema: ""
+      sqlType: Source
+      table: NATION
+      type: sourceInput
+    stepCounter: 5a7e5102-619f-4398-b096-02b5ced33b1a

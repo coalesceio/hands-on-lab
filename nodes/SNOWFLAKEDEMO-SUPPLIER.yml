@@ -1,0 +1,124 @@
+steps:
+  SUPPLIER-509fbf1e-6fa8-420a-9d44-8045a19a26ba:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: Supplier data as defined by TPC-H
+      locationID: ""
+      locationName: SNOWFLAKEDEMO
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 270ecedf-c817-4c65-a4d9-c14810c173f9
+              stepCounter: 509fbf1e-6fa8-420a-9d44-8045a19a26ba
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: S_SUPPKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4e8d6a9d-4d78-45a9-b9ae-6acb27e1c429
+              stepCounter: 509fbf1e-6fa8-420a-9d44-8045a19a26ba
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: S_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6d5a32bf-39ac-4353-8141-59719b76c358
+              stepCounter: 509fbf1e-6fa8-420a-9d44-8045a19a26ba
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: S_ADDRESS
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: b9109d34-ba2f-4f80-9747-00dd65aa4d7b
+              stepCounter: 509fbf1e-6fa8-420a-9d44-8045a19a26ba
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: S_NATIONKEY
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 368516ff-0f97-4dbe-bc59-84e33645ca01
+              stepCounter: 509fbf1e-6fa8-420a-9d44-8045a19a26ba
+            config: {}
+            dataType: VARCHAR(15)
+            defaultValue: ""
+            description: ""
+            name: S_PHONE
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 3ea0ee16-20e4-4913-915f-c2884574dcc9
+              stepCounter: 509fbf1e-6fa8-420a-9d44-8045a19a26ba
+            config: {}
+            dataType: NUMBER(12,2)
+            defaultValue: ""
+            description: ""
+            name: S_ACCTBAL
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9730ec02-1688-45dc-9ff8-00a362c2b2d1
+              stepCounter: 509fbf1e-6fa8-420a-9d44-8045a19a26ba
+            config: {}
+            dataType: VARCHAR(101)
+            defaultValue: ""
+            description: ""
+            name: S_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SNOWFLAKEDEMO', 'SUPPLIER') }}
+      name: SUPPLIER
+      schema: ""
+      sqlType: Source
+      table: SUPPLIER
+      type: sourceInput
+    stepCounter: 509fbf1e-6fa8-420a-9d44-8045a19a26ba

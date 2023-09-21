@@ -8,7 +8,31 @@ jobs:
     name: Job1
     steps: []
     subgraphs: []
-locations: {}
+locations:
+  COALESCE_CONFORM:
+    mappingDefinitions:
+      "3":
+        database: DEMO_COALESCE_DB
+        schema: CONFORM_TEST
+      "4":
+        database: DEMO_COALESCE_DB
+        schema: CONFORM_PRD
+  COALESCE_RAW:
+    mappingDefinitions:
+      "3":
+        database: DEMO_COALESCE_DB
+        schema: RAW_TEST
+      "4":
+        database: DEMO_COALESCE_DB
+        schema: RAW_PRD
+  SNOWFLAKEDEMO:
+    mappingDefinitions:
+      "3":
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF10
+      "4":
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF10
 macros: {}
 packages: {}
 projects: {}

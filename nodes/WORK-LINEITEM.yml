@@ -6,7 +6,7 @@ steps:
       deployEnabled: true
       description: ""
       locationID: ""
-      locationName: HOL
+      locationName: WORK
       metadata:
         columns:
           - acceptedValues:

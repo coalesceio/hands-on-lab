@@ -11,7 +11,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: HOL
+      locationName: WORK
       materializationType: table
       metadata:
         appliedNodeTests: []
@@ -61,13 +61,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              REGION: 458e746d-4142-4dda-8265-1ada1e37cd18
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: REGION
             join:
-              joinCondition: FROM {{ ref('HOL', 'REGION') }} "REGION"
+              joinCondition: FROM {{ ref('WORK', 'REGION') }} "REGION"
             name: STG_REGION
             noLinkRefs: []
       name: STG_REGION

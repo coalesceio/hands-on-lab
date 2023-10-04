@@ -11,7 +11,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: HOL
+      locationName: WORK
       materializationType: table
       metadata:
         appliedNodeTests: []
@@ -243,13 +243,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              LINEITEM: b0c7a1df-09ec-465a-977b-40ebdc7280c8
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: LINEITEM
             join:
-              joinCondition: FROM {{ ref('HOL', 'LINEITEM') }} "LINEITEM"
+              joinCondition: FROM {{ ref('WORK', 'LINEITEM') }} "LINEITEM"
             name: STG_LINEITEM
             noLinkRefs: []
       name: STG_LINEITEM

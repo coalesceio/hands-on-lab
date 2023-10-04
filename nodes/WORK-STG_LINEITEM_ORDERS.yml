@@ -11,7 +11,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: HOL
+      locationName: WORK
       materializationType: table
       metadata:
         appliedNodeTests: []
@@ -435,21 +435,21 @@ steps:
             customSQL:
               customSQL: ""
             dependencies:
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: STG_LINEITEM
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: STG_ORDERS
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: STG_PARTSUPP
             join:
               joinCondition: |-
-                FROM {{ ref('HOL', 'STG_ORDERS') }} "STG_ORDERS"
+                FROM {{ ref('WORK', 'STG_ORDERS') }} "STG_ORDERS"
 
-                INNER JOIN {{ ref('HOL', 'STG_LINEITEM') }} "STG_LINEITEM"
+                INNER JOIN {{ ref('WORK', 'STG_LINEITEM') }} "STG_LINEITEM"
 
                 ON "STG_ORDERS"."O_ORDERKEY" = "STG_LINEITEM"."L_ORDERKEY"
 
-                INNER JOIN {{ ref('HOL', 'STG_PARTSUPP') }} "STG_PARTSUPP"
+                INNER JOIN {{ ref('WORK', 'STG_PARTSUPP') }} "STG_PARTSUPP"
 
                 ON "STG_LINEITEM"."L_PARTKEY" = "STG_PARTSUPP"."PS_PARTKEY" AND "STG_LINEITEM"."L_SUPPKEY" = "STG_PARTSUPP"."PS_SUPPKEY"
             name: STG_LINEITEM_ORDERS

@@ -11,7 +11,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: HOL
+      locationName: WORK
       materializationType: table
       metadata:
         appliedNodeTests: []
@@ -145,13 +145,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              ORDERS: 2a1b7a98-71a7-483a-83ac-35a691ecfafc
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: ORDERS
             join:
-              joinCondition: FROM {{ ref('HOL', 'ORDERS') }} "ORDERS"
+              joinCondition: FROM {{ ref('WORK', 'ORDERS') }} "ORDERS"
             name: STG_ORDERS
             noLinkRefs: []
       name: STG_ORDERS

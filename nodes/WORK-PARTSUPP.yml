@@ -1,0 +1,94 @@
+steps:
+  PARTSUPP-dfcc0538-0d25-44f8-b52b-5e479b705f66:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: WORK
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 5b6b6765-8162-45d1-8ff2-0b9a6f4a181e
+              stepCounter: dfcc0538-0d25-44f8-b52b-5e479b705f66
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PS_PARTKEY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 84db3c4e-c5f7-4fd3-9c64-8e1d9f2b1cf3
+              stepCounter: dfcc0538-0d25-44f8-b52b-5e479b705f66
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PS_SUPPKEY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c1c5a072-ec59-4c04-9b91-1d431388e0f4
+              stepCounter: dfcc0538-0d25-44f8-b52b-5e479b705f66
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: PS_AVAILQTY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 0fb8f964-ec1a-4b8b-b65e-fa96d256b4ed
+              stepCounter: dfcc0538-0d25-44f8-b52b-5e479b705f66
+            config: {}
+            dataType: NUMBER(12,2)
+            defaultValue: ""
+            description: ""
+            name: PS_SUPPLYCOST
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 677d01be-200c-4c40-862e-f9bd8915424e
+              stepCounter: dfcc0538-0d25-44f8-b52b-5e479b705f66
+            config: {}
+            dataType: VARCHAR(199)
+            defaultValue: ""
+            description: ""
+            name: PS_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('HOL', 'PARTSUPP') }}
+      name: PARTSUPP
+      schema: ""
+      sqlType: Source
+      table: PARTSUPP
+      type: sourceInput
+    stepCounter: dfcc0538-0d25-44f8-b52b-5e479b705f66

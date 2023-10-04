@@ -1,0 +1,124 @@
+steps:
+  SUPPLIER-78d7f7d4-8579-45cb-ab92-8d2afb3245f5:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: WORK
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7050e05d-f186-44c9-a5e5-585348617958
+              stepCounter: 78d7f7d4-8579-45cb-ab92-8d2afb3245f5
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: S_SUPPKEY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 08d2a497-9508-4329-9ce7-d372eb63f0a1
+              stepCounter: 78d7f7d4-8579-45cb-ab92-8d2afb3245f5
+            config: {}
+            dataType: VARCHAR(25)
+            defaultValue: ""
+            description: ""
+            name: S_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: c204419f-ed27-4904-8e46-e8e147cb157a
+              stepCounter: 78d7f7d4-8579-45cb-ab92-8d2afb3245f5
+            config: {}
+            dataType: VARCHAR(40)
+            defaultValue: ""
+            description: ""
+            name: S_ADDRESS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 833cec43-5bc7-4090-9d6c-624480bb5ca8
+              stepCounter: 78d7f7d4-8579-45cb-ab92-8d2afb3245f5
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: S_NATIONKEY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: bfe2fb0e-338d-4fe5-8b80-d70316fc408c
+              stepCounter: 78d7f7d4-8579-45cb-ab92-8d2afb3245f5
+            config: {}
+            dataType: VARCHAR(15)
+            defaultValue: ""
+            description: ""
+            name: S_PHONE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fdbaef69-0c79-4fab-a5cb-5ee903a5fc39
+              stepCounter: 78d7f7d4-8579-45cb-ab92-8d2afb3245f5
+            config: {}
+            dataType: NUMBER(12,2)
+            defaultValue: ""
+            description: ""
+            name: S_ACCTBAL
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1e5a2947-bfa6-40c0-8e31-5e57c528d5a6
+              stepCounter: 78d7f7d4-8579-45cb-ab92-8d2afb3245f5
+            config: {}
+            dataType: VARCHAR(101)
+            defaultValue: ""
+            description: ""
+            name: S_COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('HOL', 'SUPPLIER') }}
+      name: SUPPLIER
+      schema: ""
+      sqlType: Source
+      table: SUPPLIER
+      type: sourceInput
+    stepCounter: 78d7f7d4-8579-45cb-ab92-8d2afb3245f5

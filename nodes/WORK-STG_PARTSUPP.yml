@@ -11,7 +11,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: HOL
+      locationName: WORK
       materializationType: table
       metadata:
         appliedNodeTests: []
@@ -89,13 +89,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              PARTSUPP: dfcc0538-0d25-44f8-b52b-5e479b705f66
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: PARTSUPP
             join:
-              joinCondition: FROM {{ ref('HOL', 'PARTSUPP') }} "PARTSUPP"
+              joinCondition: FROM {{ ref('WORK', 'PARTSUPP') }} "PARTSUPP"
             name: STG_PARTSUPP
             noLinkRefs: []
       name: STG_PARTSUPP

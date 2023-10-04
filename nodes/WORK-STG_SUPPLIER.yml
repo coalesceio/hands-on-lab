@@ -11,7 +11,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: HOL
+      locationName: WORK
       materializationType: table
       metadata:
         appliedNodeTests: []
@@ -103,7 +103,7 @@ steps:
           - columnReference:
               columnCounter: 0e2e754c-08cb-4b88-82d0-d7b0952fc903
               stepCounter: bd5f00a5-e24a-4d47-abbf-f8638d89cd25
-            dataType: VARCHAR(101)
+            dataType: VARCHAR(102)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -117,13 +117,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              SUPPLIER: 78d7f7d4-8579-45cb-ab92-8d2afb3245f5
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: SUPPLIER
             join:
-              joinCondition: FROM {{ ref('HOL', 'SUPPLIER') }} "SUPPLIER"
+              joinCondition: FROM {{ ref('WORK', 'SUPPLIER') }} "SUPPLIER"
             name: STG_SUPPLIER
             noLinkRefs: []
       name: STG_SUPPLIER

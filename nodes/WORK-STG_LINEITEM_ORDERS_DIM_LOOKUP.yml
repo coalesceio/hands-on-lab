@@ -11,7 +11,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: HOL
+      locationName: WORK
       materializationType: table
       metadata:
         appliedNodeTests: []
@@ -279,7 +279,7 @@ steps:
           - columnReference:
               columnCounter: 3c2a41e3-d875-47f8-bc0c-6ddf26e2adc3
               stepCounter: cc4dd4e8-681f-43f8-9d1d-83d95f5286a7
-            dataType: VARCHAR(44)
+            dataType: VARCHAR(50)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -405,7 +405,7 @@ steps:
           - columnReference:
               columnCounter: 72726c38-c0c3-456e-a75e-5c602ca55b15
               stepCounter: cc4dd4e8-681f-43f8-9d1d-83d95f5286a7
-            dataType: VARCHAR(79)
+            dataType: VARCHAR(80)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -466,29 +466,26 @@ steps:
         enabledColumnTestIDs: []
         sourceMapping:
           - aliases:
-              DIM_CUSTOMER: 550d9657-1a72-41b8-8cf2-13c7a2cdbc94
-              DIM_PART: 0d09c683-a86e-406b-826d-6410342365d6
-              DIM_SUPPLIER: e7dc1080-0149-4710-b22c-858aa1735fcd
               STG_LINEITEM_ORDERS: 4d92caad-633f-4968-875a-68dabd097f3f
               STG_PARTSUPP: 2d16b445-55eb-4979-af76-b576061ce2f2
             customSQL:
               customSQL: ""
             dependencies:
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: DIM_CUSTOMER
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: DIM_PART
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: DIM_SUPPLIER
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: STG_LINEITEM_ORDERS
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: STG_PARTSUPP
             join:
               joinCondition: |-
-                FROM {{ ref('HOL', 'STG_LINEITEM_ORDERS') }} "STG_LINEITEM_ORDERS"
+                FROM {{ ref('WORK', 'STG_LINEITEM_ORDERS') }} "STG_LINEITEM_ORDERS"
 
-                LEFT JOIN {{ ref('HOL', 'DIM_CUSTOMER') }} "DIM_CUSTOMER"
+                LEFT JOIN {{ ref('WORK', 'DIM_CUSTOMER') }} "DIM_CUSTOMER"
 
                 ON "STG_LINEITEM_ORDERS"."O_CUSTKEY" = "DIM_CUSTOMER"."C_CUSTKEY"
 
@@ -496,15 +493,15 @@ steps:
 
                 /* The dimension lookup will not yield any matches due to a lack of historical data in the customer dimension. */
 
-                LEFT JOIN {{ ref('HOL', 'DIM_PART') }} "DIM_PART"
+                LEFT JOIN {{ ref('WORK', 'DIM_PART') }} "DIM_PART"
 
                 ON "STG_LINEITEM_ORDERS"."L_PARTKEY" = "DIM_PART"."P_PARTKEY"
 
-                LEFT JOIN {{ ref('HOL', 'DIM_SUPPLIER') }} "DIM_SUPPLIER"
+                LEFT JOIN {{ ref('WORK', 'DIM_SUPPLIER') }} "DIM_SUPPLIER"
 
                 ON "STG_LINEITEM_ORDERS"."L_SUPPKEY" = "DIM_SUPPLIER"."S_SUPPKEY"
 
-                LEFT JOIN {{ ref('HOL', 'STG_PARTSUPP') }} "STG_PARTSUPP"
+                LEFT JOIN {{ ref('WORK', 'STG_PARTSUPP') }} "STG_PARTSUPP"
 
                 ON "STG_LINEITEM_ORDERS"."L_PARTKEY" = "STG_PARTSUPP"."PS_PARTKEY" AND
 

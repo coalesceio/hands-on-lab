@@ -11,7 +11,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: HOL
+      locationName: WORK
       materializationType: table
       metadata:
         appliedNodeTests: []
@@ -135,11 +135,11 @@ steps:
             description: ""
             hashColumns: []
             hashDetails: null
-            name: L_RETURNFLAG
+            name: L_REFUNDFLAG
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 0fa63991-f9cf-4b9c-8766-6f8642c470e8
+                  - columnCounter: bcdac475-2017-4014-a566-db328b7553dc
                     stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
                 transform: ""
           - columnReference:
@@ -229,7 +229,7 @@ steps:
           - columnReference:
               columnCounter: 948b8e55-5cdf-4a64-8696-92edf490f88c
               stepCounter: 2421459d-fec7-4918-a50a-a93b428a6f80
-            dataType: VARCHAR(44)
+            dataType: VARCHAR(45)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -243,13 +243,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              LINEITEM: b0c7a1df-09ec-465a-977b-40ebdc7280c8
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: LINEITEM
             join:
-              joinCondition: FROM {{ ref('HOL', 'LINEITEM') }} "LINEITEM"
+              joinCondition: FROM {{ ref('WORK', 'LINEITEM') }} "LINEITEM"
             name: STG_LINEITEM
             noLinkRefs: []
       name: STG_LINEITEM

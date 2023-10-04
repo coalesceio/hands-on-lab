@@ -6,7 +6,7 @@ steps:
       deployEnabled: true
       description: ""
       locationID: ""
-      locationName: HOL
+      locationName: WORK
       metadata:
         columns:
           - acceptedValues:
@@ -74,96 +74,6 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: a2dd1162-65b8-47bf-b24f-9eb22507cd6f
-              stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
-            config: {}
-            dataType: NUMBER(12,2)
-            defaultValue: ""
-            description: ""
-            name: L_QUANTITY
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 534e1e55-c4db-4884-a3ed-d3e602aa6d39
-              stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
-            config: {}
-            dataType: NUMBER(12,2)
-            defaultValue: ""
-            description: ""
-            name: L_EXTENDEDPRICE
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: ec604843-72eb-4dff-866e-fec0d05aa9ee
-              stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
-            config: {}
-            dataType: NUMBER(12,2)
-            defaultValue: ""
-            description: ""
-            name: L_DISCOUNT
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: cea924c8-3750-4566-ae1b-abae025831c4
-              stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
-            config: {}
-            dataType: NUMBER(12,2)
-            defaultValue: ""
-            description: ""
-            name: L_TAX
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 0fa63991-f9cf-4b9c-8766-6f8642c470e8
-              stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
-            config: {}
-            dataType: VARCHAR(1)
-            defaultValue: ""
-            description: ""
-            name: L_RETURNFLAG
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: ad8d9f40-47e7-4953-b119-f51454a1e6eb
-              stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
-            config: {}
-            dataType: VARCHAR(1)
-            defaultValue: ""
-            description: ""
-            name: L_LINESTATUS
-            nullable: true
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
               columnCounter: 9ee11f29-b008-4f4e-910d-35d78259a4bf
               stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
             config: {}
@@ -209,10 +119,100 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
+              columnCounter: bcdac475-2017-4014-a566-db328b7553dc
+              stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: L_REFUNDFLAG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: a2dd1162-65b8-47bf-b24f-9eb22507cd6f
+              stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
+            config: {}
+            dataType: NUMBER(38,0)
+            defaultValue: ""
+            description: ""
+            name: L_QUANTITY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 534e1e55-c4db-4884-a3ed-d3e602aa6d39
+              stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: L_EXTENDEDPRICE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ec604843-72eb-4dff-866e-fec0d05aa9ee
+              stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: L_DISCOUNT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: cea924c8-3750-4566-ae1b-abae025831c4
+              stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
+            config: {}
+            dataType: FLOAT
+            defaultValue: ""
+            description: ""
+            name: L_TAX
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ad8d9f40-47e7-4953-b119-f51454a1e6eb
+              stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: L_LINESTATUS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
               columnCounter: 84e2979f-25c2-4750-a335-2e16e10f1a5e
               stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
             config: {}
-            dataType: VARCHAR(25)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
             name: L_SHIPINSTRUCT
@@ -227,7 +227,7 @@ steps:
               columnCounter: 7fac0709-d5da-4f5b-90e4-43d004f7456c
               stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
             config: {}
-            dataType: VARCHAR(10)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
             name: L_SHIPMODE
@@ -242,7 +242,7 @@ steps:
               columnCounter: c3940dfd-bc3d-4339-8850-39b01ac24798
               stepCounter: b0c7a1df-09ec-465a-977b-40ebdc7280c8
             config: {}
-            dataType: VARCHAR(44)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
             name: L_COMMENT

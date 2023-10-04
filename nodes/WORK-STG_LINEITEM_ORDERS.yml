@@ -11,7 +11,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: HOL
+      locationName: WORK
       materializationType: table
       metadata:
         appliedNodeTests: []
@@ -267,7 +267,7 @@ steps:
           - columnReference:
               columnCounter: 0637bdac-1265-4a84-bb67-b1de2136f4f0
               stepCounter: 4d92caad-633f-4968-875a-68dabd097f3f
-            dataType: VARCHAR(44)
+            dataType: VARCHAR(50)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -393,7 +393,7 @@ steps:
           - columnReference:
               columnCounter: 9277cbb4-7051-4f45-a92e-7ffb93e71876
               stepCounter: 4d92caad-633f-4968-875a-68dabd097f3f
-            dataType: VARCHAR(79)
+            dataType: VARCHAR(80)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -435,21 +435,21 @@ steps:
             customSQL:
               customSQL: ""
             dependencies:
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: STG_LINEITEM
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: STG_ORDERS
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: STG_PARTSUPP
             join:
               joinCondition: |-
-                FROM {{ ref('HOL', 'STG_ORDERS') }} "STG_ORDERS"
+                FROM {{ ref('WORK', 'STG_ORDERS') }} "STG_ORDERS"
 
-                INNER JOIN {{ ref('HOL', 'STG_LINEITEM') }} "STG_LINEITEM"
+                LEFT JOIN {{ ref('WORK', 'STG_LINEITEM') }} "STG_LINEITEM"
 
                 ON "STG_ORDERS"."O_ORDERKEY" = "STG_LINEITEM"."L_ORDERKEY"
 
-                INNER JOIN {{ ref('HOL', 'STG_PARTSUPP') }} "STG_PARTSUPP"
+                LEFT JOIN {{ ref('WORK', 'STG_PARTSUPP') }} "STG_PARTSUPP"
 
                 ON "STG_LINEITEM"."L_PARTKEY" = "STG_PARTSUPP"."PS_PARTKEY" AND "STG_LINEITEM"."L_SUPPKEY" = "STG_PARTSUPP"."PS_SUPPKEY"
             name: STG_LINEITEM_ORDERS

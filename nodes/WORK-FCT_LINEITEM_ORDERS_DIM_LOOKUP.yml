@@ -9,7 +9,7 @@ steps:
       deployEnabled: true
       description: ""
       isMultisource: false
-      locationName: HOL
+      locationName: WORK
       materializationType: table
       metadata:
         appliedNodeTests: []
@@ -283,7 +283,7 @@ steps:
           - columnReference:
               columnCounter: c142bee3-d8fa-4d33-85be-cededc66fd3e
               stepCounter: 1e17f67c-2deb-4210-9cb6-cbcb57f6aa9c
-            dataType: VARCHAR(44)
+            dataType: VARCHAR(50)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -409,7 +409,7 @@ steps:
           - columnReference:
               columnCounter: a15af747-f2a3-459a-8f10-36630775043f
               stepCounter: 1e17f67c-2deb-4210-9cb6-cbcb57f6aa9c
-            dataType: VARCHAR(79)
+            dataType: VARCHAR(80)
             description: ""
             hashColumns: []
             hashDetails: null
@@ -505,13 +505,15 @@ steps:
         cteString: ""
         enabledColumnTestIDs: []
         sourceMapping:
-          - customSQL:
+          - aliases:
+              STG_LINEITEM_ORDERS_DIM_LOOKUP: cc4dd4e8-681f-43f8-9d1d-83d95f5286a7
+            customSQL:
               customSQL: ""
             dependencies:
-              - locationName: HOL
+              - locationName: WORK
                 nodeName: STG_LINEITEM_ORDERS_DIM_LOOKUP
             join:
-              joinCondition: FROM {{ ref('HOL', 'STG_LINEITEM_ORDERS_DIM_LOOKUP') }} "STG_LINEITEM_ORDERS_DIM_LOOKUP"
+              joinCondition: FROM {{ ref('WORK', 'STG_LINEITEM_ORDERS_DIM_LOOKUP') }} "STG_LINEITEM_ORDERS_DIM_LOOKUP"
             name: FCT_LINEITEM_ORDERS_DIM_LOOKUP
             noLinkRefs: []
       name: FCT_LINEITEM_ORDERS_DIM_LOOKUP

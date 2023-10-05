@@ -15,20 +15,6 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: a3a52d50-85f1-4904-971b-4bd2de3be3c7
-              stepCounter: 1e17f67c-2deb-4210-9cb6-cbcb57f6aa9c
-            dataType: NUMBER
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: DIM_CUSTOMER_KEY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 2debe365-6101-4671-8480-59fea502c725
-                    stepCounter: cc4dd4e8-681f-43f8-9d1d-83d95f5286a7
-                transform: ""
-          - columnReference:
               columnCounter: bcd13a3d-863a-4286-9ead-2b60fbf5e839
               stepCounter: 1e17f67c-2deb-4210-9cb6-cbcb57f6aa9c
             dataType: NUMBER

@@ -17,18 +17,6 @@ steps:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 2debe365-6101-4671-8480-59fea502c725
-              stepCounter: cc4dd4e8-681f-43f8-9d1d-83d95f5286a7
-            dataType: NUMBER
-            description: ""
-            name: DIM_CUSTOMER_KEY
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1d37f82b-62f1-480f-83d8-6489462af02e
-                    stepCounter: 550d9657-1a72-41b8-8cf2-13c7a2cdbc94
-                transform: ""
-          - columnReference:
               columnCounter: e59619d4-b86e-4b98-b194-8732c2b322fa
               stepCounter: cc4dd4e8-681f-43f8-9d1d-83d95f5286a7
             dataType: NUMBER

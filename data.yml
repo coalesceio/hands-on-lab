@@ -8,7 +8,23 @@ jobs:
     name: FCT_LINEITEM_ORDERS_DIM_LOOKUP__JOB
     steps: []
     subgraphs: []
-locations: {}
+locations:
+  SAMPLE:
+    mappingDefinitions:
+      "4":
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF1
+      "5":
+        database: SNOWFLAKE_SAMPLE_DATA
+        schema: TPCH_SF1
+  WORK:
+    mappingDefinitions:
+      "4":
+        database: POONAM_AGATE_TEST
+        schema: COALESCE_HOL_TEST
+      "5":
+        database: POONAM_AGATE_TEST
+        schema: COALESCE_HOL_PROD
 macros: {}
 packages: {}
 projects: {}

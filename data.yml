@@ -1,10 +1,10 @@
 defaultStorageMapping: WORK
 installedPackages: {}
 jobs:
-  Job-1:
+  Job-2:
     excludeSelector: ""
-    id: 1
-    includeSelector: "+{location: WORK name: FCT_LINEITEM_ORDERS_DIM_LOOKUP}"
+    id: 2
+    includeSelector: "+{ location: WORK name: FCT_LINEITEM_ORDERS_DIM_LOOKUP }"
     name: FCT_LINEITEM_ORDERS_DIM_LOOKUP__JOB
     steps: []
     subgraphs: []

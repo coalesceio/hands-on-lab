@@ -406,20 +406,6 @@ steps:
                   - columnCounter: 72726c38-c0c3-456e-a75e-5c602ca55b15
                     stepCounter: cc4dd4e8-681f-43f8-9d1d-83d95f5286a7
                 transform: ""
-          - columnReference:
-              columnCounter: 3e7ab2d4-b64b-4ae0-b88b-6e14ceb70819
-              stepCounter: 1e17f67c-2deb-4210-9cb6-cbcb57f6aa9c
-            dataType: NUMBER
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: days_to_ship
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 5e009504-0252-4948-b68e-73bc944f41a7
-                    stepCounter: cc4dd4e8-681f-43f8-9d1d-83d95f5286a7
-                transform: ""
           - acceptedValues:
               strictMatch: true
               values: []
@@ -456,6 +442,20 @@ steps:
             sourceColumnReferences:
               - columnReferences: []
                 transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - columnReference:
+              columnCounter: 3e7ab2d4-b64b-4ae0-b88b-6e14ceb70819
+              stepCounter: 1e17f67c-2deb-4210-9cb6-cbcb57f6aa9c
+            dataType: NUMBER
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: days_to_ship
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e009504-0252-4948-b68e-73bc944f41a7
+                    stepCounter: cc4dd4e8-681f-43f8-9d1d-83d95f5286a7
+                transform: ""
           - acceptedValues:
               strictMatch: false
               values: []

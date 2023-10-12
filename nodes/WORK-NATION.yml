@@ -1,5 +1,5 @@
 steps:
-  NATION-b8b0ce28-394c-4d01-bcfd-c21d2f3f575f:
+  NATION-3642c29a-6a58-40c6-8de9-b34c126994d1:
     operation:
       database: ""
       dataset: ""
@@ -14,8 +14,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9f7647d7-23d0-4410-b738-6f092baf9ff8
-              stepCounter: b8b0ce28-394c-4d01-bcfd-c21d2f3f575f
+              columnCounter: 62f00378-21bb-494f-97cb-d18a6fde39d9
+              stepCounter: 3642c29a-6a58-40c6-8de9-b34c126994d1
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -29,8 +29,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 391caab2-4df7-47ab-b912-ce3ea24ca250
-              stepCounter: b8b0ce28-394c-4d01-bcfd-c21d2f3f575f
+              columnCounter: 313b4c44-07de-4737-9f09-720ff68817b6
+              stepCounter: 3642c29a-6a58-40c6-8de9-b34c126994d1
             config: {}
             dataType: VARCHAR(25)
             defaultValue: ""
@@ -44,8 +44,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: b56ecc05-7779-464b-9653-a5192f15e6b7
-              stepCounter: b8b0ce28-394c-4d01-bcfd-c21d2f3f575f
+              columnCounter: 10ca3e70-db58-4721-8e5b-b3f101edb269
+              stepCounter: 3642c29a-6a58-40c6-8de9-b34c126994d1
             config: {}
             dataType: NUMBER(38,0)
             defaultValue: ""
@@ -59,8 +59,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 14373ebf-85c3-423b-8514-703e0a310cd9
-              stepCounter: b8b0ce28-394c-4d01-bcfd-c21d2f3f575f
+              columnCounter: 2542b135-a478-40bc-92ac-d0d0c03ba075
+              stepCounter: 3642c29a-6a58-40c6-8de9-b34c126994d1
             config: {}
             dataType: VARCHAR(152)
             defaultValue: ""
@@ -70,10 +70,10 @@ steps:
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('HOL', 'NATION') }}
+          joinCondition: FROM {{ ref('WORK', 'NATION') }}
       name: NATION
       schema: ""
       sqlType: Source
       table: NATION
       type: sourceInput
-    stepCounter: b8b0ce28-394c-4d01-bcfd-c21d2f3f575f
+    stepCounter: 3642c29a-6a58-40c6-8de9-b34c126994d1

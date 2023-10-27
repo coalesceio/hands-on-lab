@@ -1,35 +1,26 @@
 defaultStorageMapping: SNOWFLAKEDEMO
 installedPackages: {}
 jobs:
-  Job-1:
+  Job-5:
     excludeSelector: ""
-    id: 1
-    includeSelector: "+{ location: COALESCE_CONFORM name: FCT_LINEITEM_ORDERS_DIM_LOOKUP }"
-    name: Job1
+    id: 5
+    includeSelector: "+{ location: COALESCE_CONFORM name: FCT_ORDERS_LINEITEM_DIM_LOOKUP }"
+    name: Job 1
     steps: []
     subgraphs: []
 locations:
   COALESCE_CONFORM:
     mappingDefinitions:
-      "3":
-        database: DEMO_COALESCE_DB
-        schema: CONFORM_TEST
       "4":
         database: DEMO_COALESCE_DB
         schema: CONFORM_PRD
   COALESCE_RAW:
     mappingDefinitions:
-      "3":
-        database: DEMO_COALESCE_DB
-        schema: RAW_TEST
       "4":
         database: DEMO_COALESCE_DB
         schema: RAW_PRD
   SNOWFLAKEDEMO:
     mappingDefinitions:
-      "3":
-        database: SNOWFLAKE_SAMPLE_DATA
-        schema: TPCH_SF10
       "4":
         database: SNOWFLAKE_SAMPLE_DATA
         schema: TPCH_SF10
@@ -950,7 +941,7 @@ stepTypes:
     id: View
     isDisabled: true
     metadata:
-      defaultStorageLocation: COALESCE_CONFORM
+      defaultStorageLocation: null
       error: null
       nodeMetadataSpec: |
         capitalized: View
@@ -1495,5 +1486,9 @@ stepTypes:
             {% endif %}
     name: Persistent Stage
     version: 1
-subgraphs: {}
+subgraphs:
+  Subgraph-3:
+    id: "3"
+    name: New Subgraph
+    steps: []
 version: 2
